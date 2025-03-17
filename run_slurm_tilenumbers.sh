@@ -5,8 +5,15 @@
 #
 date
 
+readfile=$1
+
 echo "Job started"
-python get_tile_information_from_fasta.py /prj/NovaST/Dieterich_AAGMTVHM5/data/AAGMTVHM5_NovaST_25s000253-1-1_Dieterich_lane1sample1_1_sequence.txt.gz
+# running tile separation
+python get_tiles_from_fasta.py $readfile
+
+
+# command line for getting tile information
+# python get_tile_information_from_fasta.py /prj/NovaST/Dieterich_AAGMTVHM5/data/AAGMTVHM5_NovaST_25s000253-1-1_Dieterich_lane1sample1_1_sequence.txt.gz
 echo "Job ended!"
 
 date
